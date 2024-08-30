@@ -29,8 +29,8 @@ const questions = [
   },
   {
     type: "input",
-    name: "contributions",
-    message: 'Please enter contribution guidlines:',
+    name: "credits",
+    message: 'Please enter credit/contribution(s)',
   },
   {
     type: "input",
