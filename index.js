@@ -25,12 +25,12 @@ const questions = [
   {
     type: "input",
     name: "usage",
-    message: 'Please enter usage information',
+    message: 'Please enter usage information:',
   },
   {
     type: "input",
     name: "credits",
-    message: 'Please enter credit/contribution(s)',
+    message: 'Please enter credit/contribution(s):',
   },
   {
     type: "input",
@@ -58,14 +58,14 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  return fs.writeFileSync(path.join(process.cwd(), fileName) data);
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((responses) => {
     console.log("Creating your README file . . .");
-    writeToFile("./dist/generatedREADME.md", genreateMarkdown({...responses}));
+    writeToFile("./dist/generatedREADME.md", generateMarkdown({...responses}));
   });
 }
 
